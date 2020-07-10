@@ -48,7 +48,7 @@ body {
     min-width: 100px;
     background: transparent;
     box-shadow: inset -5px -5px 8px rgba(255, 255, 255, 0.03), inset 6px 6px 8px rgba(0, 0, 0, 0.3);
-    box-shadow: -webkit-inset -5px -5px 8px rgba(255, 255, 255, 0.03), -webkit-inset 6px 6px 8px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset -5px -5px 8px rgba(255, 255, 255, 0.03), inset 6px 6px 8px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     color: chartreuse;
 }

@@ -28,7 +28,7 @@ body {
     margin-bottom: 50px;
     padding: 20px;
     border: 1px solid #141414;
-        box-shadow: -6px -6px 13px rgba(255,255,255,0.07), 6px 5px 15px rgba(0,0,0,0.4);
+    box-shadow: -6px -6px 13px rgba(255, 255, 255, 0.07), 6px 5px 15px rgba(0, 0, 0, 0.4);
     border-radius: 8px;
 }
 .tdl__title {
@@ -47,7 +47,8 @@ body {
     flex: 1 1 auto;
     min-width: 100px;
     background: transparent;
-    box-shadow: inset -5px -5px 8px rgba(255,255,255,0.03), inset 6px 6px 8px rgba(0,0,0,0.3);
+    box-shadow: inset -5px -5px 8px rgba(255, 255, 255, 0.03), inset 6px 6px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: webkit-inset -5px -5px 8px rgba(255, 255, 255, 0.03), webkit-inset 6px 6px 8px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     color: chartreuse;
 }
@@ -59,6 +60,7 @@ body {
     border-radius: 20px;
     flex: 0 0 20px;
     margin: 7px 7px 7px 15px;
+    box-shadow: -1px -1px 5px rgba(255, 255, 255, 0.15), 1px 1px 5px rgba(0, 0, 0, 1);
     position: relative;
 }
 .tdl__add-button .image {
@@ -70,7 +72,7 @@ body {
     height: 22px;
 }
 .tdl__add-button .image svg {
-    fill: #1d1d1d;
+    fill: #141414;
 }
 .line {
     height: 1px;
@@ -89,7 +91,7 @@ body {
     padding: 10px 17px;
 }
 .tdl__item-check {
-    border: 1px solid chartreuse;
+    /* border: 1px solid chartreuse; */
     display: block;
     width: 20px;
     height: 20px;
@@ -97,6 +99,7 @@ body {
     border-radius: 20px;
     margin: 7px;
     flex: 0 0 20px;
+    box-shadow: -1px -1px 5px rgba(255, 255, 255, 0.15), 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
 .tdl__item-done {
     border: 1px solid rgb(70, 70, 70);

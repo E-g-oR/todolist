@@ -7,7 +7,7 @@
     <title>My TO-DO-LIST</title>
     <link rel="shortcut icon" href="img/check.png">
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="js/script.js" defer></script>
+    <!-- <script src="js/script.js" defer></script> -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -264,6 +264,33 @@
             </div>
         </div>
     </header>
+
+    <script>
+        const TDL = document.querySelector('.tdl'),
+                TDLInput = document.querySelector('.tdl__input'),
+                TDLItem = document.querySelector('.tdl__item');
+
+            const func = (d) => {
+                const target = d.target,
+                    InputText = TDLInput.value;
+                if (target.closest('.tdl__add-button') || d.code == 'Enter') {
+                    if (InputText == "") alert('Поле не заполнено!');
+                    else {
+                        console.log(InputText);
+                        TDLInput.value = '';
+                    }
+                }
+            }
+            TDL.addEventListener('click', (e) => {
+                func(e);
+            });
+
+            TDLInput.addEventListener('keydown', (e) => {
+                if (e.code == 'Enter') {
+                    func(e);
+                }
+            });
+    </script>
 </body>
 
 </html>

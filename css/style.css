@@ -28,7 +28,7 @@ body {
     margin-bottom: 50px;
     padding: 20px;
     border: 1px solid #141414;
-    box-shadow: -6px -6px 13px rgba(255, 255, 255, 0.07), 6px 5px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: -6px -6px 13px rgba(255, 255, 255, 0.05), 6px 5px 15px rgba(0, 0, 0, 0.4);
     border-radius: 8px;
 }
 .tdl__title {
@@ -60,7 +60,7 @@ body {
     border-radius: 20px;
     flex: 0 0 20px;
     margin: 7px 7px 7px 15px;
-    box-shadow: -1px -1px 5px rgba(255, 255, 255, 0.15), 1px 1px 5px rgba(0, 0, 0, 1);
+    box-shadow: -1px -1px 5px rgba(255, 255, 255, 0.13), 1px 1px 5px rgba(0, 0, 0, 1);
     position: relative;
 }
 .tdl__add-button .image {
@@ -99,10 +99,10 @@ body {
     border-radius: 20px;
     margin: 7px;
     flex: 0 0 20px;
-    box-shadow: -1px -1px 5px rgba(255, 255, 255, 0.15), 1px 1px 5px rgba(0, 0, 0, 0.7);
+    box-shadow: -1px -1px 5px rgba(255, 255, 255, 0.1), 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
 .tdl__item-done {
-    border: 1px solid rgb(70, 70, 70);
+    border: 1px solid #272727;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -112,7 +112,7 @@ body {
 .tdl__item-text-done {
     padding: 10px 17px;
     text-decoration: line-through;
-    color: rgb(70, 70, 70);
+    color: #272727;
 }
 button.tdl__item-check-done {
     flex: 0 0 20px;
@@ -120,7 +120,7 @@ button.tdl__item-check-done {
     height: 20px;
     border-radius: 20px;
     margin: 7px;
-    border: 1px solid rgb(70, 70, 70);
+    border: 1px solid #242424;
     background-color: chartreuse;
     display: flex;
     justify-content: center;
@@ -134,5 +134,13 @@ button.tdl__item-check-done {
     height: 22px;
 }
 .tdl__item-check-done .image svg {
-    fill: rgb(70, 70, 70);
+    fill: #242424;
+}
+@media (max-width: 550px) {
+    .container {
+        padding: 0;
+    }
+    .tdl {
+        margin: 0;
+    }
 }

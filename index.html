@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My TO-DO-LIST</title>
+    <link rel="shortcut icon" href="img/check.png">
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -14,31 +15,90 @@
     <header class="header">
         <div class="header__body container">
             <div class="header__center">
+
+                <!--!----------------------- ГЛАВНЫЙ КОНТЕЙНЕР ------------------------->
                 <div class="tdl">
                     <h1 class="tdl__title">My TO-DO-LIST</h1>
 
+                    <!--!----------------------- ПОЛЕ ДОБАВЛЕНИЯ ЗАДАЧИ ------------------------->
                     <div class="tdl__add-new">
                         <input class="tdl__input" type="text">
-                        <button class="tdl__add-button"></button>
+                        <button class="tdl__add-button">
+                            <span class="image">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                    y="0px" viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512.002 512.002;" xml:space="preserve">
+                                    <g>
+                                        <g>
+                                            <path d="M437.02,74.982C388.668,26.631,324.382,0.001,256.002,0.001c-68.38,0.001-132.667,26.629-181.02,74.981
+                                			C26.631,123.336,0.001,187.622,0,256.003c0,68.38,26.629,132.666,74.982,181.018C123.335,485.372,187.623,512,256.002,512
+                                			c68.38,0,132.666-26.629,181.018-74.98s74.981-112.639,74.982-181.018C512.001,187.622,485.372,123.336,437.02,74.982z
+                                			 M400.6,271.003H271.001L271,400.602c0,8.284-6.715,15-15,15c-8.283,0-15-6.716-15-15l0.001-129.6H111.402
+                                			c-8.285,0-15-6.716-15-15s6.715-15,15-15h129.599l0.001-129.601c0-8.284,6.716-15,15-15c8.283,0,15,6.716,15,15l-0.001,129.601
+                                			H400.6c8.285,0,15,6.716,15,15C415.6,264.286,408.885,271.003,400.6,271.003z" />
+                                        </g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                </svg>
+                            </span>
+                        </button>
                     </div>
+                    <!--!__________________________________________________-->
 
+                    <!--!----------------------- РАЗДЕЛЯЮЩАЯ ЛИНИЯ ------------------------->
                     <div class="line"></div>
+                    <!--!__________________________________________________-->
 
+                    <!--!----------------------- ТЕКУЩАЯ ЗАДАЧА ------------------------->
                     <div class="tdl__item">
                         <p class="tdl__item-text">get done some business</p>
                         <button class="tdl__item-check"></button>
                     </div>
+                    <!--!__________________________________________________-->
 
+                    <!--!----------------------- ТЕКУЩАЯ ЗАДАЧА ------------------------->
                     <div class="tdl__item">
                         <p class="tdl__item-text">get done some business</p>
                         <button class="tdl__item-check"></button>
                     </div>
+                    <!--!__________________________________________________-->
 
+                    <!--!----------------------- ТЕКУЩАЯ ЗАДАЧА ------------------------->
                     <div class="tdl__item">
                         <p class="tdl__item-text">get done some business</p>
                         <button class="tdl__item-check"></button>
                     </div>
+                    <!--!__________________________________________________-->
 
+                    <!--!----------------------- ВЫПОЛНЕННАЯ ЗАДАЧА ------------------------->
                     <div class="tdl__item-done">
                         <p class="tdl__item-text-done">get done some business</p>
                         <button class="tdl__item-check-done">
@@ -90,7 +150,9 @@
                             </span>
                         </button>
                     </div>
+                    <!--!__________________________________________________-->
 
+                    <!--!----------------------- ВЫПОЛНЕННАЯ ЗАДАЧА ------------------------->
                     <div class="tdl__item-done">
                         <p class="tdl__item-text-done">get done some business</p>
                         <button class="tdl__item-check-done">
@@ -142,6 +204,9 @@
                             </span>
                         </button>
                     </div>
+                    <!--!__________________________________________________-->
+
+                    <!--!----------------------- ВЫПОЛНЕННАЯ ЗАДАЧА ------------------------->
                     <div class="tdl__item-done">
                         <p class="tdl__item-text-done">get done some business</p>
                         <button class="tdl__item-check-done">
@@ -193,7 +258,9 @@
                             </span>
                         </button>
                     </div>
+                    <!--!__________________________________________________-->
                 </div>
+                <!--!__________________________________________________-->
             </div>
         </div>
     </header>

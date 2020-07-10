@@ -73,6 +73,8 @@ body {
 .navigation__menu-line {
   display: block;
   height: 1px;
+  width: 20px;
+  margin: 0 auto;
   background-color: #00e874;
   position: relative;
   -webkit-transition: 0.25s cubic-bezier(0.86, 0, 0.07, 1);

@@ -167,6 +167,7 @@ body {
   box-shadow: inset -5px -5px 8px rgba(255, 255, 255, 0.03), inset 6px 6px 8px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   color: #ffb72b;
+  font-size: 15px;
 }
 
 .tdl__add-button {

@@ -7,6 +7,9 @@
     <title>My TO-DO-LIST</title>
     <link rel="shortcut icon" href="img/CheckG.png">
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- <script src="just.js"></script> -->
     <!-- <script src="js/script.js" defer></script> -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -112,20 +115,7 @@
                     <div class="tdl__add-new">
                         <input class="tdl__input" type="text" placeholder="Enter your task here">
                         <button class="tdl__add-button">
-                            <span class="image-add">
-                                <svg x="0px" y="0px" viewBox="0 0 512.002 512.002">
-                                    <g>
-                                        <g>
-                                            <path d="M437.02,74.982C388.668,26.631,324.382,0.001,256.002,0.001c-68.38,0.001-132.667,26.629-181.02,74.981
-                                			C26.631,123.336,0.001,187.622,0,256.003c0,68.38,26.629,132.666,74.982,181.018C123.335,485.372,187.623,512,256.002,512
-                                			c68.38,0,132.666-26.629,181.018-74.98s74.981-112.639,74.982-181.018C512.001,187.622,485.372,123.336,437.02,74.982z
-                                			 M400.6,271.003H271.001L271,400.602c0,8.284-6.715,15-15,15c-8.283,0-15-6.716-15-15l0.001-129.6H111.402
-                                			c-8.285,0-15-6.716-15-15s6.715-15,15-15h129.599l0.001-129.601c0-8.284,6.716-15,15-15c8.283,0,15,6.716,15,15l-0.001,129.601
-                                			H400.6c8.285,0,15,6.716,15,15C415.6,264.286,408.885,271.003,400.6,271.003z" />
-                                        </g>
-                                    </g>
-                                </svg>
-                            </span>
+
                         </button>
                     </div>
                     <!--!__________________________________________________-->
@@ -190,43 +180,12 @@
     </header>
 
     <script>
-        'use strict';
         const TDL = document.querySelector('.tdl'),
-            TDLInput = document.querySelector('.tdl__input'),
-            TDLItem = document.querySelector('.tdl__item'),
-            NavigationMenu = document.querySelector('.navigation__menu'),
-            TDLAddButton = document.querySelector('.image-add'),
-            TDLTasksCurrent = document.querySelector('.tdl__tasks-current'),
-            TDLTasksDone = document.querySelector('.tdl__tasks-done');
-        var deg = 0;
-        // ! Функция очищает input, создает новый элемент (  < .tdl__item > { TDLItem }  ) и передает в него введенное значение
-        const func = (d, g) => {
-            const target = d.target,
-                InputText = TDLInput.value;
-            if (target.closest('.tdl__add-button') || d.code == 'Enter') {
-                if (InputText == "") alert('Поле не заполнено!');
-                else {
-                    let NewTask = document.createElement('div'), // ! СОЗДАЕМ НОВЫЙ БЛОК "DIV"
-                        NewTaskText = document.createElement('p'), // ! СОЗДАЕМ НОВЫЙ ПАРАГРАФ "P"
-                        NewTaskButton = document.createElement('button'); // ! СОЗДАЕМ НОВУЮ КНОПКУ "BUTTON"
-                    NewTask.className = 'tdl__item';
-                    NewTaskText.className = 'tdl__item-text';
-                    NewTaskText.innerText = InputText;
-                    NewTaskButton.setAttribute('onclick', 'getDone(e)');
-                    NewTaskButton.className = 'tdl__item-check';
-                    NewTask.appendChild(NewTaskText);
-                    NewTask.appendChild(NewTaskButton);
-                    // console.log(InputText);
-                    TDLAddButton.style.transition = "0.5s cubic-bezier(0.86, 0, 0.07, 1)";
-                    TDLAddButton.style.transform = "rotate(" + g + "deg)";
-                    // console.log(g);
-                    TDLTasksCurrent.append(NewTask);
-                    TDLInput.value = '';
-                }
-            }
-        }
-        // ! ------------------------------------------------
-
+                TDLInput = document.querySelector('.tdl__input'),
+                NavigationMenu = document.querySelector('.navigation__menu');
+                // TDLAddButton = document.querySelector('.tdl__add-button'),
+                // TDLTasksCurrent = document.querySelector('.tdl__tasks-current'),
+                // TDLTasksDone = document.querySelector('.tdl__tasks-done');
         // ! ---------------- КНОПКА МЕНЮ ----------------
         NavigationMenu.addEventListener('click', () => {
             if (!(NavigationMenu.classList.contains('navigation__menu_active-js'))) {
@@ -236,17 +195,40 @@
             }
         });
         // ! ---------------------------------------------
-
-        TDLAddButton.addEventListener('click', (e) => {
-            deg += 540;
-            func(e, deg);
-        });
-
-        TDLInput.addEventListener('keydown', (e) => {
-            if (e.code == 'Enter') {
-                deg += 540;
-                func(e, deg);
+        //! ПОПЫТКА СДЕЛАТЬ НА JQUERY
+        $(function () {
+            function myFunc() {
+                let task = $('.tdl__input').val();
+                if (task !== '') {
+                    const TDLItem = $('<div class="tdl__item"></div>'),
+                        TDLItemText = $('<p class="tdl__item-text"></p>'),
+                        TDLItemCheck = $('<button class="tdl__item-check"></button>');
+                    TDLItemText.text(task);
+                    $(TDLItem).append(TDLItemText);
+                    $(TDLItem).append(TDLItemCheck);
+                    $('.tdl__tasks-current').append(TDLItem);
+                    $('.tdl__input').val('');
+                    $('.tdl__item-check').on('click', function () {
+                        // const TDLItemDone = $('<div class="tdl__item-done"></div>'),
+                        //     TDLItemTextDone = $('<p class="tdl__item-text-done"></p>'),
+                        //     TDLItemCheckDone = $('<div class="tdl__item-check-done"></div>'),
+                        //     taskText = $(this).prev().text();
+                        $(this).parent().remove();
+                        // TDLItemTextDone.text(taskText);
+                        // $(TDLItemDone).append(TDLItemTextDone);
+                        // $(TDLItemDone).append(TDLItemCheckDone);
+                        // $('.tdl__tasks-done').append(TDLItemDone);
+                    });
+                } else alert('Поле не заполнено!');
             }
+
+            $('.tdl__input').on('keydown', function (e) {
+                if (e.code == 'Enter') myFunc();
+            });
+            $('.tdl__add-button').on('click', function () {
+                myFunc();
+            });
+
         });
     </script>
 </body>

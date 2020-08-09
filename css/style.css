@@ -38,7 +38,7 @@ body {
 }
 
 .navigation__body.center {
-  padding: 0 10px;
+  padding: 5px 10px;
 }
 
 .navigation__settings {
@@ -157,6 +157,7 @@ body {
 }
 
 .tdl__input {
+  border: 0.1px solid rgba(255, 183, 43, 0.45);
   padding: 10px 17px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -217,7 +218,8 @@ body {
 }
 
 .tdl__item {
-  border: 0.1px solid rgba(255, 183, 43, 0.45);
+  -webkit-box-shadow: -3px -3px 8px rgba(255, 255, 255, 0.05), 3px 3px 8px rgba(0, 0, 0, 0.4);
+          box-shadow: -3px -3px 8px rgba(255, 255, 255, 0.05), 3px 3px 8px rgba(0, 0, 0, 0.4);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -314,11 +316,14 @@ body {
           transform: translate(2.15px, 0px) rotate(-45deg);
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
+  .tdl__input {
+    outline: none;
+  }
+}
+
+@media (max-width: 380px) {
   .container {
     padding: 0;
-  }
-  .tdl {
-    margin: 0;
   }
 }

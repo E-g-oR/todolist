@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 const TDL = document.querySelector(".tdl"),
   TDLInput = document.querySelector(".tdl__input"),
   NavigationMenu = document.querySelector(".navigation__menu"),

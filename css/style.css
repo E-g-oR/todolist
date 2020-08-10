@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #141414;
+  background-color: #101010;
   color: #ffb72b;
   font-size: 15px;
   font-family: "Cabin", sans-serif;
@@ -230,7 +230,23 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-radius: 5px;
-  margin: 14px 0;
+  margin-bottom: 20px;
+  max-height: 40px;
+}
+
+.tdl__item:last-child {
+  margin-bottom: 0;
+}
+
+.scale {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  max-height: 0;
+  margin: 0;
 }
 
 .tdl__item-text {
@@ -238,7 +254,6 @@ body {
 }
 
 .tdl__item-check {
-  border: 0.01px solid rgba(255, 183, 43, 0.45);
   display: block;
   width: 20px;
   height: 20px;
@@ -248,8 +263,21 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 20px;
           flex: 0 0 20px;
-  -webkit-box-shadow: -1px -1px 5px rgba(255, 255, 255, 0.1), 1px 1px 5px rgba(0, 0, 0, 0.7);
-          box-shadow: -1px -1px 5px rgba(255, 255, 255, 0.1), 1px 1px 5px rgba(0, 0, 0, 0.7);
+  outline: none;
+  -webkit-box-shadow: -1px -1px 5px rgba(255, 255, 255, 0.1), 2px 2px 5px rgba(0, 0, 0, 0.7);
+          box-shadow: -1px -1px 5px rgba(255, 255, 255, 0.1), 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.no-shadow {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.tdl__item.no-shadow {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
 }
 
 .tdl__item-done {
@@ -300,7 +328,7 @@ body {
   position: absolute;
   display: block;
   height: 1.5px;
-  width: 5.5px;
+  width: 6.8px;
   border-radius: 5px;
   background-color: #ffb72b;
 }

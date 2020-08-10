@@ -7,14 +7,15 @@ const TDL = document.querySelector(".tdl"),
   TDLTasksDone = document.querySelector(".tdl__tasks-done");
 var arr = [];
 
-if (localStorage.getItem("current") != "") {
+if (localStorage.getItem("current") != null && localStorage.getItem("current") != '') {
   arr = localStorage.getItem("current").split(",");
+} else {
+  console.log('локальное хранилище пусто');
 }
 
-function getDone() {}
-
+// function getDone() {}
 window.onload = function() {
-  console.log(localStorage.getItem("current"));
+  // console.log(localStorage.getItem("current"));
   if (localStorage.getItem("current") != "") {
     var arr = localStorage.getItem("current").split(",");
     console.log(arr);

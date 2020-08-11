@@ -130,7 +130,6 @@ body {
   margin-top: 70px;
   margin-bottom: 100vh;
   padding: 20px;
-  border: 1px solid #141414;
   -webkit-box-shadow: -6px -6px 13px rgba(255, 255, 255, 0.05), 6px 5px 15px rgba(0, 0, 0, 0.4);
           box-shadow: -6px -6px 13px rgba(255, 255, 255, 0.05), 6px 5px 15px rgba(0, 0, 0, 0.4);
   border-radius: 8px;
@@ -231,7 +230,7 @@ body {
           justify-content: space-between;
   border-radius: 5px;
   margin-bottom: 20px;
-  max-height: 40px;
+  max-height: 240px;
 }
 
 .tdl__item:last-child {
@@ -280,6 +279,10 @@ body {
           transition-delay: 0.3s;
 }
 
+.tdl__tasks-done {
+  padding-top: 20px;
+}
+
 .tdl__item-done {
   border: 1px solid #272727;
   display: -webkit-box;
@@ -291,7 +294,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 14px 0;
+  margin-bottom: 20px;
   border-radius: 5px;
 }
 
